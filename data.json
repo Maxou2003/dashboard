@@ -1,0 +1,171 @@
+[
+    {
+        "name": "Alexis PAQUEREAU--GASNIER",
+        "hosts": [
+            {
+                "name": "kali",
+                "ip": "192.168.10.31"
+            },
+            {
+                "name": "windows",
+                "ip": "192.168.10.30"
+            }
+        ]
+    },
+    {
+        "name": "Maxence MARTIN",
+        "hosts": [
+            {
+                "name": "kali",
+                "ip": "192.168.10.21"
+            },
+            {
+                "name": "windows",
+                "ip": "192.168.10.20"
+            }
+        ]
+    },
+    {
+        "name": "El karci Khalil",
+        "hosts": [
+            {
+                "name": "kali vm",
+                "ip": "192.168.10.192"
+            },
+            {
+                "name": "windows",
+                "ip": "192.168.10.191"
+            }
+        ]
+    },
+    {
+        "name": "Byron CHOLET",
+        "hosts": [
+            {
+                "name": "kali",
+                "ip": "192.168.10.42"
+            },
+            {
+                "name": "workstation",
+                "ip": "192.168.10.40"
+            }
+        ]
+    },
+    {
+        "name": "Nolann MOY",
+        "hosts": [
+            {
+                "name": "kali",
+                "ip": "192.168.10.51"
+            },
+            {
+                "name": "windows",
+                "ip": "192.168.10.50"
+            }
+        ]
+    },
+    {
+        "name": "Dorian HODE",
+        "hosts": [
+            {
+                "name": "kali",
+                "ip": "192.168.10.111"
+            },
+            {
+                "name": "windows",
+                "ip": "192.168.10.110"
+            }
+        ]
+    },
+    {
+        "name": "Gaston PLOT",
+        "hosts": [
+            {
+                "name": "windows",
+                "ip": "192.168.10.140"
+            },
+            {
+                "name": "kali",
+                "ip": "192.168.10.142"
+            }
+        ]
+    },
+    {
+        "name": "Matthias LEHOUELLEUR",
+        "hosts": [
+            {
+                "name": "windows",
+                "ip": "192.168.10.130"
+            },
+            {
+                "name": "kali",
+                "ip": "192.168.10.132"
+            }
+        ]
+    },
+    {
+        "name": "Martin MOLLAT",
+        "hosts": [
+            {
+                "name": "kali",
+                "ip": "192.168.10.71"
+            },
+            {
+                "name": "windows",
+                "ip": "192.168.10.70"
+            }
+        ]
+    },
+    {
+        "name": "Rémi BROTTES",
+        "hosts": [
+            {
+                "name": "kali",
+                "ip": "192.168.10.151"
+            },
+            {
+                "name": "windows",
+                "ip": "192.168.10.150"
+            }
+        ]
+    },
+    {
+        "name": "Samed Erdem YILMAZ",
+        "hosts": [
+            {
+                "name": "kali",
+                "ip": "192.168.10.172"
+            },
+            {
+                "name": "windows",
+                "ip": "192.168.10.171"
+            }
+        ]
+    },
+    {
+        "name": "Murat Deniz AKKOC",
+        "hosts": [
+            {
+                "name": "kali",
+                "ip": "192.168.10.182"
+            },
+            {
+                "name": "windows",
+                "ip": "192.168.10.181"
+            }
+        ]
+    },
+    {
+        "name": "Antoine STUDER",
+        "hosts": [
+            {
+                "name": "kali",
+                "ip": "192.168.10.69"
+            },
+            {
+                "name": "windows",
+                "ip": "192.168.10.60"
+            }
+        ]
+    }
+]
