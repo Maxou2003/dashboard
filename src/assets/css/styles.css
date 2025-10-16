@@ -68,3 +68,9 @@
         background: #e84118;
         color: white;
     }
+
+    .actions{
+        font-weight: bold;
+        font-size: large;
+        cursor: pointer;
+    }

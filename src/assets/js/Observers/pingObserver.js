@@ -10,6 +10,7 @@ function renderTable(data) {
                         <th>Nom de la machine</th>
                         <th>Adresse IP</th>
                         <th>Status</th>
+                        <th>Actions</th>
                     </tr>
             `;
 
@@ -25,6 +26,7 @@ function renderTable(data) {
                                     ${host.alive ? 'En ligne' : 'Hors ligne'}
                                 </span>
                             </td>
+                            <td class="actions" data-user-ip="${host.ip}">⋮</td>
                         </tr>
                     `;
         });
