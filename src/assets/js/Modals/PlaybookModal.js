@@ -7,6 +7,7 @@ class PlaybookModal {
         this.hostStatus = document.getElementById("hostStatus");
         this.tableContainer = document.getElementById("table-container");
         this.playbookSelector = document.getElementById("playbookSelect");
+        this.outputField = document.getElementById("playbookOutput");
 
         this.hostData = null;
         this.playbooks = null;
@@ -78,6 +79,7 @@ class PlaybookModal {
         this.hostIP.innerText = "";
         this.hostOS.innerText = "";
         this.hostStatus.innerText = "";
+        this.outputField.innerText ="";
         this.playbookSelector.innerHTML = `<option value="">-- Choisir un playbook --</option>`;
     }
 
@@ -109,8 +111,7 @@ class PlaybookModal {
         const stdout = await this.runPlaybook(selectedOption);
 
         if(stdout){
-            const outputFiel = document.getElementById("playbookOutput");
-            outputFiel.innerText = stdout;
+            this.outputField.innerText = stdout;
         }
     }
 
