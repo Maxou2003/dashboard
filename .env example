@@ -1,0 +1,2 @@
+PLAYBOOK_PATH = "/path/to/playbook/folder"
+PRIVATE_KEY_PATH = "/mon/path/secret"
