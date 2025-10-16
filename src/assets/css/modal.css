@@ -7,17 +7,41 @@
   justify-content: center;
   align-items: center;
   animation: fadeIn 0.2s ease;
+  flex-direction: row;
 }
 
 .modal-content {
   background-color: #fff;
   padding: 24px;
   border-radius: 12px;
-  width: 420px;
+  width: 820px;
+  height: 400px;
   max-width: 90%;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   animation: slideUp 0.25s ease;
   position: relative;
+  flex-direction: row;
+  display: flex;
+}
+
+.modal-right{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin-left: 5px;
+}
+
+.modal-left{
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  padding: 5px;
+  padding-right: 5px;
+  padding-right: 20px;
+  border-right: 1px solid black;
 }
 
 .close {
@@ -62,6 +86,20 @@
   display: block;
   margin-bottom: 6px;
   font-weight: 500;
+}
+
+.output {
+  background-color: #0f0f0f;
+  color: #00ff90;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 15px;
+  height: 250px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.4em;
+  width: 80%;
 }
 
 #playbookSelect {

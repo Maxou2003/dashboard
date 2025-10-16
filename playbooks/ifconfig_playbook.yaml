@@ -1,0 +1,11 @@
+- name: Run ifconfig command to check network info
+  hosts: all
+  remote_user: ansible
+  tasks:
+    - name: Execute ifconfig command
+      ansible.builtin.command: ifconfig
+      register: ifconfig_output
+
+    - name: Display ifconfig output
+      ansible.builtin.debug:
+        var: ifconfig_output.stdout_lines- name: Run ifconfig command to check network info

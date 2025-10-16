@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/assets/css/modal.css">
   <script src="/socket.io/socket.io.js"></script>
   <script src="/assets/js/Observers/pingObserver.js" defer></script>
-  <script src="/assets/js/Modals/playbooks.js" defer></script>
+  <script src="/assets/js/Modals/PlaybookModal.js" defer></script>
 </head>
 
 <body>
@@ -18,32 +18,34 @@
   <div id="playbookModal" class="modal">
   <div class="modal-content">
     <span id="closeModalBtn" class="close">&times;</span>
+    <div class="modal-left">
+      <h2>Lancer un playbook Ansible</h2>
 
-    <h2>Lancer un playbook Ansible</h2>
+      <div class="host-info">
+        <h3>Informations de l’hôte</h3>
+        <ul>
+          <li><strong>Utilisateur :</strong> <span id="hostName"></span></li>
+          <li><strong>Adresse IP :</strong> <span id="hostIP"></span></li>
+          <li><strong>Nom de la machine </strong> <span id="hostOS"></span></li>
+          <li><strong>Status :</strong> <span id="hostStatus" class="status-online"></span></li>
+        </ul>
+      </div>
 
-    <div class="host-info">
-      <h3>Informations de l’hôte</h3>
-      <ul>
-        <li><strong>Utilisateur :</strong> <span id="hostName"></span></li>
-        <li><strong>Adresse IP :</strong> <span id="hostIP"></span></li>
-        <li><strong>Nom de la machine </strong> <span id="hostOS"></span></li>
-        <li><strong>Status :</strong> <span id="hostStatus" class="status-online"></span></li>
-      </ul>
+      <div class="playbook-selection">
+        <label for="playbookSelect">Sélectionner un playbook :</label>
+        <select id="playbookSelect">
+          <option value="">-- Choisir un playbook --</option>
+        </select>
+      </div>
+
+      <div class="modal-actions">
+        <button id="launchBtn" class="launch-btn">🚀 Lancer</button>
+        <button id="cancelBtn" class="cancel-btn">Annuler</button>
+      </div>
     </div>
-
-    <div class="playbook-selection">
-      <label for="playbookSelect">Sélectionner un playbook :</label>
-      <select id="playbookSelect">
-        <option value="">-- Choisir un playbook --</option>
-        <option value="update.yml">Mise à jour du système</option>
-        <option value="deploy.yml">Déploiement d'application</option>
-        <option value="check.yml">Vérification de configuration</option>
-      </select>
-    </div>
-
-    <div class="modal-actions">
-      <button id="launchBtn" class="launch-btn">🚀 Lancer</button>
-      <button id="cancelBtn" class="cancel-btn">Annuler</button>
+    <div class="modal-right">
+      <h2>Résultat de la commande :</h2>
+      <pre id="playbookOutput" class="output"></pre>
     </div>
   </div>
 </div>

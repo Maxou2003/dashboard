@@ -11,7 +11,6 @@ app.use((req, res, next) => {
 });
 
 
-
 app.use('/api/', ApiRoutes);
 app.use('/', FrontRoutes);
 
