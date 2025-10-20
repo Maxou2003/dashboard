@@ -1,5 +1,5 @@
 const socket = io();
-const loader = document.getElementById("loader");
+const loader = document.querySelector(".loader-container");
 const tableContainer = document.getElementById("table-container");
 
 function renderTable(data) {

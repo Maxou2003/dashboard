@@ -1,3 +1,5 @@
+import Toastr from '../Toastr/Toastr.js';
+
 class PlaybookModal {
     constructor() {
         this.modal = document.getElementById("playbookModal");
@@ -164,6 +166,11 @@ class PlaybookModal {
         try {
             const host = this.hostData[0]?.host || {}; 
             if( host == {} || !playbook || playbook =="") return null;
+            if(!host.alive){
+                let toastr = new Toastr("error","L'hôte est hors ligne. Impossible de lancer un playbook.","fa-regular fa-circle-xmark",5000);
+                toastr.showToast();
+                return null;
+            }
 
             let ip = host.ip.replaceAll('.','-');
             const response = await fetch(`http://localhost:3000/api/play?playbook=${playbook}&ip=${ip}`, {

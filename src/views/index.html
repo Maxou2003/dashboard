@@ -5,15 +5,19 @@
   <meta charset="UTF-8">
   <title>📊 Dashboard Réseau</title>
   <link rel="stylesheet" href="/assets/css/dashboard.css">
-  <link rel="stylesheet" href="/assets/css/modal.css">
+  <link rel="stylesheet" href="/assets/css/modal.css"> 
+  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
   <script src="/socket.io/socket.io.js"></script>
+  <script src="/assets/js/Modals/PlaybookModal.js" type="module" defer></script>
   <script src="/assets/js/Observers/pingObserver.js" defer></script>
-  <script src="/assets/js/Modals/PlaybookModal.js" defer></script>
 </head>
 
 <body>
   <header>📊 Dashboard Réseau</header>
-  <div id="loader">Chargement des données...</div>
+  <div class="loader-container">
+    <div id="loader" class="loader"></div>
+    <label>Récupération des statuts des utilisateurs...</label>
+  </div>
   <div id="table-container" style="display:none;"></div>
   <div id="playbookModal" class="modal">
   <div class="modal-content">
