@@ -167,7 +167,7 @@ class PlaybookModal {
             const host = this.hostData[0]?.host || {}; 
             if( host == {} || !playbook || playbook =="") return null;
             if(!host.alive){
-                let toastr = new Toastr("error","L'hôte est hors ligne. Impossible de lancer un playbook.","fa-regular fa-circle-xmark",5000);
+                let toastr = new Toastr("error","Hôte indisponible !","L'hôte est hors ligne. Impossible de lancer un playbook.","fa-regular fa-circle-xmark",5000);
                 toastr.showToast();
                 return null;
             }
