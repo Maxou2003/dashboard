@@ -18,7 +18,6 @@ class PlaybookModal {
     }
 
     init() {
-        console.log("PlaybookModal initialized !");
         this.addActionsListener();
     }
 
@@ -39,10 +38,8 @@ class PlaybookModal {
     }
 
     addCloseModalListner(){
-        console.log("Modal is ready to close");
         document.addEventListener("click",(e)=>{
             if(e.target.id == "closeModalBtn" || e.target === this.modal || e.target.id == "cancelBtn"){
-                console.log("You clicked on ",e.target,", now the modal will close");
                 this.closeModal();
             }
         })
@@ -165,9 +162,13 @@ class PlaybookModal {
     async runPlaybook(playbook){
         try {
             const host = this.hostData[0]?.host || {}; 
-            if( host == {} || !playbook || playbook =="") return null;
+            if( host == {} || !playbook || playbook =="") {
+                let toastr = new Toastr("error","Données manquantes !","Veuillez sélectionner un playbook valide.");
+                toastr.showToast();
+                return null;
+            }
             if(!host.alive){
-                let toastr = new Toastr("error","Hôte indisponible !","L'hôte est hors ligne. Impossible de lancer un playbook.","fa-regular fa-circle-xmark",5000);
+                let toastr = new Toastr("error","Hôte indisponible !","L'hôte est hors ligne. Impossible de lancer un playbook.");
                 toastr.showToast();
                 return null;
             }
@@ -184,7 +185,8 @@ class PlaybookModal {
             }
 
             const data = await response.json();
-            console.log("Réponse JSON :", data);
+            let toastr = new Toastr("success","Playbook lancé !","Le playbook a été lancé avec succès.");
+            toastr.showToast();
             return data.stdout;
         } catch (error) {
             console.error("Erreur:", error);
